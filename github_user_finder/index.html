@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitHub User Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="search-box">
+    <input id="usernameInput" type="text" placeholder="Enter GitHub username" />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div id="loading" class="hidden">Loading...</div>
+  <div id="errorMsg" class="hidden"></div>
+  <div id="profileCard" class="hidden">
+    <img id="avatar" src="" alt="avatar" />
+    <h2 id="name"></h2>
+    <p id="bio"></p>
+    <p id="place"></p>
+    <p>Followers: <span id="followers"></span></p>
+    <p>Repos: <span id="repos"></span></p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init(); </script>
+  <script src="script.js"></script>
+</body>
+</html>

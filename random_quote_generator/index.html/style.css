@@ -1,0 +1,54 @@
+* {
+      box-sizing: border-box;
+      }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  font-family: sans-serif;
+ }
+
+.quote-box {
+          background: white;
+          padding: 32px 24px;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          max-width: 500px;
+          width: 90%;
+          text-align: center;
+        }
+
+                                  #quoteText {
+                                    font-size: 1.3rem;
+                                      margin-bottom: 12px;
+                                        min-height: 60px; /* prevents layout jump when text length changes */
+                                        }
+
+                                        #quoteAuthor {
+                                          font-style: italic;
+                                            color: #555;
+                                              margin-bottom: 20px;
+                                              }
+
+                                              button {
+                                                padding: 10px 20px;
+                                                  border: none;
+                                                    border-radius: 6px;
+                                                      background: #333;
+                                                        color: white;
+                                                          font-size: 1rem;
+                                                            cursor: pointer;
+                                                            }
+
+                                                            button:hover {
+                                                              background: #555;
+                                                              }
+
+                                                              button:disabled {
+                                                                background: #999;
+                                                                  cursor: not-allowed;
+                                                                  }

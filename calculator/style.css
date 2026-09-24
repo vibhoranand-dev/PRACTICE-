@@ -1,0 +1,224 @@
+* {
+        margin: 0;
+            padding: 0;
+                box-sizing: border-box;
+                }
+
+                body {
+                    min-height: 100vh;
+                        background: #0b1111;
+
+                            display: flex;
+                                justify-content: center;
+                                    align-items: center;
+
+                                        font-family: Arial, sans-serif;
+                                        }
+
+
+                                        /* =========================
+                                           CALCULATOR
+                                              ========================= */
+
+                                              .calculator {
+                                                  width: 100%;
+                                                      max-width: 430px;
+
+                                                          min-height: 100vh;
+
+                                                              padding: 10px 7px;
+
+                                                                  display: flex;
+                                                                      flex-direction: column;
+                                                                          justify-content: flex-end;
+                                                                          }
+
+
+                                                                          /* =========================
+                                                                             DISPLAY
+                                                                                ========================= */
+
+                                                                                .display {
+                                                                                    height: 300px;
+
+                                                                                        display: flex;
+                                                                                            justify-content: flex-end;
+                                                                                                align-items: flex-end;
+
+                                                                                                    padding: 20px;
+
+                                                                                                        color: #ffffff;
+
+                                                                                                            font-size: 60px;
+                                                                                                                font-weight: 300;
+
+                                                                                                                    overflow: hidden;
+                                                                                                                    }
+
+
+                                                                                                                    /* =========================
+                                                                                                                       BUTTON GRID
+                                                                                                                          ========================= */
+
+                                                                                                                          .buttons {
+                                                                                                                              display: grid;
+
+                                                                                                                                  grid-template-columns: repeat(4, 1fr);
+
+                                                                                                                                      gap: 8px;
+                                                                                                                                      }
+
+
+                                                                                                                                      /* =========================
+                                                                                                                                         ALL BUTTONS
+                                                                                                                                            ========================= */
+
+                                                                                                                                            button {
+                                                                                                                                                width: 100%;
+                                                                                                                                                    aspect-ratio: 1 / 1;
+
+                                                                                                                                                        border: none;
+                                                                                                                                                            outline: none;
+
+                                                                                                                                                                border-radius: 50%;
+
+                                                                                                                                                                    font-size: 30px;
+                                                                                                                                                                        font-weight: 400;
+
+                                                                                                                                                                            cursor: pointer;
+
+                                                                                                                                                                                -webkit-tap-highlight-color: transparent;
+                                                                                                                                                                                    touch-action: manipulation;
+
+                                                                                                                                                                                        transition:
+                                                                                                                                                                                                transform 0.08s ease,
+                                                                                                                                                                                                        filter 0.08s ease,
+                                                                                                                                                                                                                box-shadow 0.08s ease;
+                                                                                                                                                                                                                }
+
+
+                                                                                                                                                                                                                /* =========================
+                                                                                                                                                                                                                   NUMBER BUTTONS
+                                                                                                                                                                                                                      ========================= */
+
+                                                                                                                                                                                                                      .number {
+                                                                                                                                                                                                                          background: #293031;
+                                                                                                                                                                                                                              color: #eeeeee;
+                                                                                                                                                                                                                              }
+
+
+                                                                                                                                                                                                                              /* =========================
+                                                                                                                                                                                                                                 FUNCTION BUTTONS
+                                                                                                                                                                                                                                    ========================= */
+
+                                                                                                                                                                                                                                    .function {
+                                                                                                                                                                                                                                        background: #344b4b;
+                                                                                                                                                                                                                                            color: #dce7e7;
+                                                                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                                                                            /* AC */
+
+                                                                                                                                                                                                                                            .clear {
+                                                                                                                                                                                                                                                color: #00eeee;
+                                                                                                                                                                                                                                                }
+
+
+                                                                                                                                                                                                                                                /* =========================
+                                                                                                                                                                                                                                                   OPERATORS
+                                                                                                                                                                                                                                                      ========================= */
+
+                                                                                                                                                                                                                                                      .operator {
+                                                                                                                                                                                                                                                          background: #345252;
+                                                                                                                                                                                                                                                              color: #c5eeee;
+                                                                                                                                                                                                                                                              }
+
+
+                                                                                                                                                                                                                                                              /* =========================
+                                                                                                                                                                                                                                                                 EQUAL BUTTON
+                                                                                                                                                                                                                                                                    ========================= */
+
+                                                                                                                                                                                                                                                                    .equal {
+                                                                                                                                                                                                                                                                        background: #aec9ed;
+                                                                                                                                                                                                                                                                            color: #19334b;
+                                                                                                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                                                                                                            /* =========================
+                                                                                                                                                                                                                                                                               NORMAL HOVER
+                                                                                                                                                                                                                                                                                  ========================= */
+
+                                                                                                                                                                                                                                                                                  button:hover {
+                                                                                                                                                                                                                                                                                      filter: brightness(1.12);
+                                                                                                                                                                                                                                                                                      }
+
+
+                                                                                                                                                                                                                                                                                      /* =========================
+                                                                                                                                                                                                                                                                                         TOUCH / PRESS EFFECT
+                                                                                                                                                                                                                                                                                            ========================= */
+
+                                                                                                                                                                                                                                                                                            button:active {
+                                                                                                                                                                                                                                                                                                transform: scale(0.88);
+
+                                                                                                                                                                                                                                                                                                    filter: brightness(1.35);
+
+                                                                                                                                                                                                                                                                                                        box-shadow:
+                                                                                                                                                                                                                                                                                                                0 0 0 4px rgba(255, 255, 255, 0.08),
+                                                                                                                                                                                                                                                                                                                        0 0 18px rgba(255, 255, 255, 0.12);
+                                                                                                                                                                                                                                                                                                                        }
+
+
+                                                                                                                                                                                                                                                                                                                        /* Operator touch */
+
+                                                                                                                                                                                                                                                                                                                        .operator:active {
+                                                                                                                                                                                                                                                                                                                            box-shadow:
+                                                                                                                                                                                                                                                                                                                                    0 0 0 4px rgba(100, 220, 210, 0.08),
+                                                                                                                                                                                                                                                                                                                                            0 0 22px rgba(100, 220, 210, 0.35);
+                                                                                                                                                                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                                                                                                                                                                            /* Equal touch */
+
+                                                                                                                                                                                                                                                                                                                                            .equal:active {
+                                                                                                                                                                                                                                                                                                                                                box-shadow:
+                                                                                                                                                                                                                                                                                                                                                        0 0 0 4px rgba(170, 205, 245, 0.12),
+                                                                                                                                                                                                                                                                                                                                                                0 0 25px rgba(170, 205, 245, 0.5);
+                                                                                                                                                                                                                                                                                                                                                                }
+
+
+                                                                                                                                                                                                                                                                                                                                                                /* AC touch */
+
+                                                                                                                                                                                                                                                                                                                                                                .clear:active {
+                                                                                                                                                                                                                                                                                                                                                                    box-shadow:
+                                                                                                                                                                                                                                                                                                                                                                            0 0 0 4px rgba(0, 238, 238, 0.08),
+                                                                                                                                                                                                                                                                                                                                                                                    0 0 22px rgba(0, 238, 238, 0.35);
+                                                                                                                                                                                                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                                                                                                                                                                                                    /* =========================
+                                                                                                                                                                                                                                                                                                                                                                                       MOBILE
+                                                                                                                                                                                                                                                                                                                                                                                          ========================= */
+
+                                                                                                                                                                                                                                                                                                                                                                                          @media (max-width: 450px) {
+
+                                                                                                                                                                                                                                                                                                                                                                                              .calculator {
+                                                                                                                                                                                                                                                                                                                                                                                                      width: 100%;
+                                                                                                                                                                                                                                                                                                                                                                                                              min-height: 100vh;
+
+                                                                                                                                                                                                                                                                                                                                                                                                                      padding: 10px 7px;
+                                                                                                                                                                                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                              .display {
+                                                                                                                                                                                                                                                                                                                                                                                                                                      height: 300px;
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                              font-size: 55px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      .buttons {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              gap: 7px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      button {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              font-size: 28px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
