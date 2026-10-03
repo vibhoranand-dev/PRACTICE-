@@ -1,0 +1,12 @@
+#clock{
+    font-size: 135px;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background-color: #0f0f0f;
+}

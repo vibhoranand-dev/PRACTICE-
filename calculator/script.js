@@ -4,7 +4,7 @@ const buttons = document.querySelector(".buttons");
 let input="";
 
 buttons.addEventListener("click",function(e){
-    const btn =e.target;
+    let btn =e.target;
 
     if(btn.classList.contains("clear")){
         handleClear();
@@ -13,12 +13,12 @@ buttons.addEventListener("click",function(e){
     } else if (btn.classList.contains("equal")){
         calculate();
     } else if (btn.classList.contains("operator")){
-        handleOperator();
+        handleOperator(btn);
     } else if (btn.classList.contains("number")){
-        handleNumber();
+        handleNumber(btn);
     }
 
-})
+});
 
 
 function handleBackspace() {
@@ -33,11 +33,14 @@ function handleClear() {
 }
 
 
-function handleNumber() {
+function handleNumber(btn) {
+    input+= btn.innerText;
+    display.innerText=input;
     
 }
 
-function handleOperator() {
+function handleOperator(btn) {
+    
     
 }
 

@@ -22,6 +22,10 @@ guessBtn.addEventListener('click',function(){
         feedback.textContent="Please enter a valid number";
         return;
     } 
+    if (userGuess<1 || userGuess>100){
+        feedback.textContent= "Please enter a number between 1 and 100";
+        return;
+    }
     if (previousGuesses.includes(userGuess)){
         feedback.textContent="Already Entered"
         return

@@ -21,7 +21,12 @@ function dataUser(){
     console.log(url);
     
 fetch(url) 
- .then(res=> res.json())
+ .then(res=> {
+   if(!res.ok){
+      throw new Error("User not found");
+   }
+   return res.json();
+})
  .then(data=>{
    loading.classList.add("hidden");
    console.log(data);
@@ -34,7 +39,12 @@ fetch(url)
     profileCard.style.display ="block"
     avatar.src=data.avatar_url;
  })
- .catch(err=>console.log(err));
+ .catch(error=>{
+   loading.classList.add("hidden");
+   errorMsg.textContent = "User not found";
+   profileCard.style.display=="none";
+   errorMsg.style.display="block"
+ });
 }
 
  searchBtn.addEventListener("click",function(){
